@@ -14,8 +14,6 @@ __pycache__/
 *.pyd
 
 # Models and serialization
-*.pkl
-ml-engine/models/*.pkl
 
 # Environment variables
 .env
