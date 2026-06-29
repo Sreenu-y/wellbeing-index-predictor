@@ -86,19 +86,19 @@ const HistoryTable = ({ history, onSelect, onDelete }) => {
                   className={`history-row ${isDeletingId === item._id ? 'animate-delete' : 'animate-fade-in'}`} 
                   style={isDeletingId !== item._id ? { animationDelay: `${index * 0.05}s`, animationFillMode: 'both' } : {}}
                 >
-                  <td className="timestamp">{formatDate(item.createdAt)}</td>
-                  <td className="country-cell">{item.countryName || <span className="muted">Custom</span>}</td>
-                  <td>{item.lifeExpectancy}</td>
-                  <td>{item.expectedYearsSchooling}</td>
-                  <td>{item.meanYearsSchooling}</td>
-                  <td>${item.gniPerCapita?.toLocaleString()}</td>
-                  <td className="score-cell">{item.hdiScore?.toFixed(4)}</td>
-                  <td>
+                  <td className="timestamp" data-label="Time">{formatDate(item.createdAt)}</td>
+                  <td className="country-cell" data-label="Country">{item.countryName || <span className="muted">Custom</span>}</td>
+                  <td data-label="Life Exp.">{item.lifeExpectancy}</td>
+                  <td data-label="Exp. School">{item.expectedYearsSchooling}</td>
+                  <td data-label="Mean School">{item.meanYearsSchooling}</td>
+                  <td data-label="GNI / Cap.">${item.gniPerCapita?.toLocaleString()}</td>
+                  <td className="score-cell" data-label="HDI Score">{item.hdiScore?.toFixed(4)}</td>
+                  <td data-label="Category">
                     <span className={`badge ${getCategoryBadgeClass(item.hdiCategory)}`}>
                       {item.hdiCategory}
                     </span>
                   </td>
-                  <td style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>
+                  <td style={{ textAlign: 'right', whiteSpace: 'nowrap' }} data-label="Actions">
                     <button 
                       className="btn btn-sm btn-outline" 
                       onClick={() => onSelect(item)}
