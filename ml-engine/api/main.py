@@ -10,10 +10,13 @@ from pydantic import BaseModel, Field
 app = FastAPI(title="HDI Insight ML Service", description="FastAPI microservice for predicting HDI scores")
 
 # Configure CORS
-# React frontend runs on localhost:5173, Express backend runs on localhost:5000
+# In production, these should be set to your Render frontend and backend URLs
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
+backend_url = os.getenv("BACKEND_URL", "http://localhost:5000")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5000", "http://localhost:5173"],
+    allow_origins=[frontend_url, backend_url, "http://localhost:5173", "http://localhost:5000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

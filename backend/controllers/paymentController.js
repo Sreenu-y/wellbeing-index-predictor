@@ -20,6 +20,7 @@ exports.createCheckoutSession = async (req, res) => {
   }
 
   try {
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',
@@ -42,8 +43,8 @@ exports.createCheckoutSession = async (req, res) => {
         credits: pack.credits,
         userId: req.user._id.toString(),
       },
-      success_url: `http://localhost:5173/payment/success?session_id={CHECKOUT_SESSION_ID}&credits=${pack.credits}`,
-      cancel_url: `http://localhost:5173/payment/cancel`,
+      success_url: `${frontendUrl}/payment/success?session_id={CHECKOUT_SESSION_ID}&credits=${pack.credits}`,
+      cancel_url: `${frontendUrl}/payment/cancel`,
     });
 
     // Record pending payment in DB
