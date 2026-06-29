@@ -1,37 +1,44 @@
-# 🌍 HDI Insight
+# 🌍 HDI Insight — Human Development Index Predictor
 
 <div align="center">
+
+# 🌍 HDI Insight
 
 ### AI-Powered Human Development Index Prediction Platform
 
 Predict, analyze, and explore **Human Development Index (HDI)** scores using Machine Learning, AI, and interactive visualizations.
 
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)](https://react.dev)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com)
-[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
-[![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://stripe.com)
-[![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react)](https://react.dev)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white)](https://nodejs.org)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)](https://mongodb.com)
+[![FastAPI](https://img.shields.io/badge/ML_API-FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge\&logo=scikitlearn\&logoColor=white)](https://scikit-learn.org)
+[![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge\&logo=stripe\&logoColor=white)](https://stripe.com)
+[![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge\&logo=google\&logoColor=white)](https://ai.google.dev)
 
 <br>
 
 ## 🚀 Live Demo
 
-### [https://hdi-insight.onrender.com](https://hdi-insight.onrender.com)
+### https://hdi-insight.onrender.com
 
 </div>
 
-![HDI Insight Hero](frontend/public/hero-screenshot.png)
 
----
+<p align="center">
+<img src="frontend/public/hero-screenshot.png" width="900" alt="HDI Insight Home"/>
+</p>
+
+
 
 # 📖 About the Project
 
 HDI Insight is a full-stack Machine Learning web application that predicts and analyzes the **Human Development Index (HDI)** of countries based on key socioeconomic indicators.
 
 The application combines:
+
 * 🤖 Machine Learning prediction
 * 💬 Google Gemini AI chatbot
 * 📊 Interactive analytics dashboard
@@ -41,6 +48,7 @@ The application combines:
 * 📰 Educational development blog
 
 Users can enter country statistics and instantly receive:
+
 * HDI Score
 * Development Category
 * AI-generated Policy Recommendations
@@ -55,20 +63,27 @@ The **Human Development Index (HDI)** is a composite statistic developed by the 
 It evaluates three major dimensions:
 
 ❤️ **Health**
+
 * Life Expectancy at Birth
 
 🎓 **Education**
+
 * Mean Years of Schooling
 * Expected Years of Schooling
 
 💰 **Standard of Living**
+
 * Gross National Income (PPP) per Capita
 
 Countries are classified into four development categories:
-* 🟢 **Very High** (≥ 0.800)
-* 🟡 **High** (0.700 – 0.799)
-* 🟠 **Medium** (0.550 – 0.699)
-* 🔴 **Low** (< 0.550)
+
+🟢 Very High
+
+🟡 High
+
+🟠 Medium
+
+🔴 Low
 
 ---
 
@@ -90,7 +105,7 @@ Countries are classified into four development categories:
 
 # 🏗️ System Architecture
 
-```text
+```
                     User
                       │
                       ▼
@@ -108,50 +123,80 @@ Countries are classified into four development categories:
         FastAPI ML Service
              │
              ▼
-   Linear Regression Prediction Model
+ Random Forest Prediction Model
 ```
 
 ---
 
 # 🛠️ Tech Stack
 
-### Frontend
-* React, Vite, React Router DOM, Axios, Lucide React
+## Frontend
 
-### Backend
-* Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs, Stripe API
+* React
+* Vite
+* React Router DOM
+* Axios
+* Lucide React
 
-### Machine Learning
-* Python, FastAPI, Scikit-learn, Pandas, NumPy, Joblib
+---
 
-### AI
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT
+* bcryptjs
+* Stripe API
+
+---
+
+## Machine Learning
+
+* Python
+* FastAPI
+* Scikit-learn
+* Pandas
+* NumPy
+* Joblib
+
+---
+
+## AI
+
 * Google Gemini API
 
 ---
 
 # 📂 Project Structure
 
-```text
+```
 hdi-insight/
 │
-├── frontend/             # React app
+├── assets/
+│
+├── frontend/
 │   ├── src/
-│   │   ├── components/   # UI components
-│   │   ├── pages/        # App routes
-│   │   └── services/     # API client
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── assets/
 │   └── public/
 │
-├── backend/              # Node.js/Express App
-│   ├── controllers/      # API logic
-│   ├── models/           # Mongoose schemas
-│   ├── routes/           # Express endpoints
-│   └── server.js         # Entry point
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── server.js
 │
-└── ml-engine/            # FastAPI App
-    ├── api/              # FastAPI routes
-    ├── data/             # Training data
-    ├── models/           # Saved .pkl ML models
-    ├── src/              # ML training scripts
+└── ml-engine/
+    ├── api/
+    ├── data/
+    ├── models/
+    ├── src/
     └── requirements.txt
 ```
 
@@ -159,20 +204,47 @@ hdi-insight/
 
 # 🚀 Installation
 
+## Clone Repository
+
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/hdi-insight.git
+
+cd hdi-insight
+```
+
+---
+
 ## 1️⃣ Setup ML Engine
 
 ```bash
 cd ml-engine
+
 python -m venv venv
 ```
 
-**Activate**
-* Windows: `.\venv\Scripts\activate`
-* Mac/Linux: `source venv/bin/activate`
+Activate
 
-**Install & Run**
+Windows
+
+```bash
+.\venv\Scripts\activate
+```
+
+Linux/macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install
+
 ```bash
 pip install -r requirements.txt
+```
+
+Run
+
+```bash
 uvicorn api.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
@@ -182,22 +254,32 @@ uvicorn api.main:app --reload --host 127.0.0.1 --port 8000
 
 ```bash
 cd backend
+
 npm install
 ```
 
-**Create `.env` file** in the `backend/` folder:
+Create `.env`
+
 ```env
 PORT=5000
+
 MONGO_URI=your_mongodb_uri
+
 JWT_SECRET=your_secret
+
 STRIPE_SECRET_KEY=your_key
+
 STRIPE_WEBHOOK_SECRET=your_secret
+
 GEMINI_API_KEY=your_key
+
 ML_API_URL=http://127.0.0.1:8000
+
 FRONTEND_URL=http://localhost:5173
 ```
 
-**Run**
+Run
+
 ```bash
 npm run dev
 ```
@@ -208,19 +290,27 @@ npm run dev
 
 ```bash
 cd frontend
+
 npm install
 ```
 
-**Create `.env` file** in the `frontend/` folder:
+Create `.env`
+
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
-**Run**
+Run
+
 ```bash
 npm run dev
 ```
-Open `http://localhost:5173` in your browser.
+
+Visit
+
+```
+http://localhost:5173
+```
 
 ---
 
@@ -242,24 +332,81 @@ Open `http://localhost:5173` in your browser.
 # 🧠 Machine Learning Model
 
 ### Algorithm
-✅ **Linear Regression**
+
+✅ Random Forest Regressor
 
 ### Input Features
+
 * Life Expectancy
 * Mean Years of Schooling
 * Expected Years of Schooling
 * Gross National Income (PPP)
 
 ### Output
+
 * HDI Score
 * Development Category
 * Policy Recommendations
 
 ---
 
-# 📄 License
+# 🚀 Future Enhancements
 
-This project is licensed under the **MIT License**.
+* 🌍 Country Comparison
+* 📈 HDI Trend Forecasting
+* 🗺 Interactive World Map
+* 📄 PDF Report Export
+* 📊 Advanced Analytics
+* 🌐 Multi-language Support
+* 📱 Mobile Application
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+
+
+
+
+# 👨‍💻 Author
+
+## Shaik Abdul Hanif
+
+**Full Stack Developer | MERN Stack | Machine Learning | Java**
+
+### GitHub
+
+https://github.com/SHAIKHANIF2004
+
+### LinkedIn
+
+https://www.linkedin.com/in/abdulhanifshaik
 
 ---
 
