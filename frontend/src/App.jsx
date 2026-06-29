@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -58,13 +58,13 @@ const AppContent = () => {
     navigate('/');
   };
 
-  const updateUserCredits = (newCredits) => {
+  const updateUserCredits = useCallback((newCredits) => {
     setUser((prev) => {
       const updated = { ...prev, credits: newCredits };
       localStorage.setItem('hdiUser', JSON.stringify(updated));
       return updated;
     });
-  };
+  }, []);
 
   const handlePredictFromChat = (predictData) => {
     // Navigate to dashboard if not already there, prediction will be triggered via URL state

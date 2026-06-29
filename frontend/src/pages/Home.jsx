@@ -157,13 +157,19 @@ const Home = ({ user, onCreditsUpdate }) => {
       <div className="tab-navigation animate-slide-up-delay-2">
         <button
           className={`tab-btn ${activeTab === 'predict' ? 'active' : ''}`}
-          onClick={() => setActiveTab('predict')}
+          onClick={() => {
+            setActiveTab('predict');
+            navigate('/dashboard', { replace: true });
+          }}
         >
           Predictor
         </button>
         <button
           className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
-          onClick={() => setActiveTab('history')}
+          onClick={() => {
+            setActiveTab('history');
+            navigate('/dashboard#history', { replace: true });
+          }}
         >
           History ({history.length})
         </button>
